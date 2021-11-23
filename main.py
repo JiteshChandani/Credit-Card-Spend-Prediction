@@ -12,7 +12,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
 
-    int_features = [int(x) for x in request.form.values()]
+    int_features = [float(x) for x in request.form.values()]
 
     int_features[4]=np.log(int_features[4])
     int_features[5]=np.log(int_features[5])
