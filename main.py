@@ -14,6 +14,7 @@ def predict():
 
     int_features = [int(x) for x in request.form.values()]
 
+    int_features[4]=np.log(int_features[4])
     int_features[5]=np.log(int_features[5])
     int_features[6]=np.log(int_features[6])
     int_features[7]=np.log(int_features[7])
